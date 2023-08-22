@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <mahesh>Hi</mahesh><br>
+    <h1>Hi DMC</h1> -->
+ 
+    X Value = <input type="text" id="txtX"> <br/>
+    <div id="divForErrorForX" style="color: red;">
+    </div> <br/>
+    Y Value = <input type="text" id="txtY"> <br/>
+    <div id="divForErrorForY" style="color: red;">
+    </div> <br/>
+    Result = <input type="text" id="txtResult"> <br/>
+    <button onclick="DoSomething()">Click Me</button>
+
+    <!-- <script src="validationcode.js"></script> -->
+    <script src="validationcode.min.js"></script>
+    <script>
+        function DoSomething()
+        {
+            debugger;
+            Validate("txtX", "divForErrorForX", "X is needed");
+            Validate("txtY", "divForErrorForY", "Y is needed");
+
+            var refTotxtResult = document.getElementById("txtResult");
+
+            var refTotxtX = document.getElementById("txtX");
+            var refTotxtY = document.getElementById("txtY");
+            var refTotxtResult = document.getElementById("txtResult");
+
+            var result = parseInt(refTotxtX.value) + 
+                                parseInt(refTotxtY.value);
+
+            refTotxtResult.value = result;
+        }
+    </script>
+</body>
+</html>
